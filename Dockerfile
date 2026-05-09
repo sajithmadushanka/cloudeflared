@@ -6,4 +6,4 @@ COPY cloudflared/config.yml /etc/cloudflared/config.yml
 
 ENTRYPOINT ["/bin/sh", "-c"]
 
-CMD ["printf '%s' \"$TUNNEL_JSON\" > /etc/cloudflared/tunnel.json && exec cloudflared --config /etc/cloudflared/config.yml tunnel run"]
+CMD ["printf '%s' \"$TUNNEL_JSON\" > /etc/cloudflared/tunnel.json && cat /etc/cloudflared/tunnel.json && exec cloudflared --config /etc/cloudflared/config.yml tunnel run"]
