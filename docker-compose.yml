@@ -1,12 +1,12 @@
-version: '3.9'
+# version: '3.9'
 
-services:
-  cloudflared:
-    image: cloudflare/cloudflared:latest
-    container_name: cloudflare-tunnel
-    restart: unless-stopped
+# services:
+#   cloudflared:
+#     image: cloudflare/cloudflared:latest
+#     container_name: cloudflare-tunnel
+#     restart: unless-stopped
 
-    volumes:
-      - ./cloudflared:/etc/cloudflared
+#     volumes:
+#       - ./cloudflared:/etc/cloudflared
 
-    command: tunnel --config /etc/cloudflared/config.yml run
+#     command: tunnel --config /etc/cloudflared/config.yml run
