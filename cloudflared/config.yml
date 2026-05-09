@@ -1,0 +1,10 @@
+tunnel: 34b96abc-b058-4b24-94f0-44de912e5569
+credentials-file: /etc/cloudflared/tunnel.json
+
+ingress:
+  - hostname: dev.apptuki.com
+    service: https://mentecart.onrender.com
+    originRequest:
+      noTLSVerify: true
+
+  - service: http_status:404
